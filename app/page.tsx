@@ -1,95 +1,40 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "@/styles/app.module.scss";
+import { parse } from 'csv-parse';
+import fs from 'fs'; // Importing file system module
+import { parseCsv } from '@/app/utils/ParseCsv';
+import { Key } from "react";
+import SharePopulationChart from "@/components/SharePopulationChart/SharePopulationChart";
+import BubbleChart from "@/components/BubbleChart/BubbleChart";
+import InternetTimeline from "@/components/InternetTimeline/InternetTimeline";
+import TypeUsage from "@/components/TypeUsage/TypeUsage";
 
 export default function Home() {
+
+  // Read the CSV file
+  const csvData1 = fs.readFileSync('app/data/ShareOfThePopulationUsingTheInternet.csv', 'utf8');
+  const csvData2 = fs.readFileSync('app/data/bubbleChart_data_corrected.csv', 'utf8');
+  const csvData3 = fs.readFileSync('app/data/InternetHistogram.csv', 'utf8');
+  const csvData4 = fs.readFileSync('app/data/typesOfUsage.csv', 'utf8');
+
+  // Parse the CSV data
+  const parsedData1 = parseCsv(csvData1);
+  const parsedData2 = parseCsv(csvData2);
+  const parsedData3 = parseCsv(csvData3);
+  const parsedData4 = parseCsv(csvData4);
+
+  // Process the data for plotly
+  //const plotlyData = processData(parsedData);
+
+  console.log(parsedData4)
+
+  //Get all the necessary data from files
+
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <SharePopulationChart data={parsedData1} />
+      <BubbleChart data={parsedData2} />
+      <InternetTimeline data={parsedData3} />
+      <TypeUsage data={parsedData4} />
     </main>
   );
 }

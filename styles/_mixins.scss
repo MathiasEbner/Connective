@@ -11,14 +11,14 @@
 }
 
 @mixin card {
-    padding: 25px;
+    padding: 20px;
 
     @include mobile {
-        padding: 25px;
+        padding: 20px;
     }
 
     border-radius: 15px;
     border: 0.5px solid rgba($white, 0.1);
-    background-color: $grey-light;
+    background-color: $white;
     box-shadow: $container-shadow;
 }

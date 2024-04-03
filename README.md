@@ -1,3 +1,9 @@
+npm install react-plotly.js plotly.js
+npm install --save-dev @types/react-plotly.js
+
+npm install csv-parse
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

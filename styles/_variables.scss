@@ -6,12 +6,10 @@ $desktop: $tablet + 1;
 // COLORS
 $white: #EDEDED;
 $black: #161616;
-$black-light: #1C1C1C;
-$grey-dark: #f0f0f0; // #1C1C1C; // Gray-2
-$grey-light: #f6f6f6; // #232323; //Gray-1
-$blue: #007DFF; //CTA-Farbe 1
-$blue-dark: #0057B2; // CTA-1 Hover
-$highlight: #6F2931;
+$blue-dark: #27374D;
+$blue-light: #526D82;
+$blue-grey: #9DB2BF;
+$blue-white: #dde6ed43;
 $error: #F44336;
 $warning: #FF9800;
 $succuess: #4CAF50;
@@ -21,7 +19,4 @@ $container-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 $inner-shadow: inset 1px 1px 15px rgba(0, 0, 0, 0.25);
 
 // BACKGROUNDS
-// $background-red: linear-gradient(129deg, $grey-dark 38%, rgba(31, 20, 22, 1) 100%);
-$background-container: linear-gradient(-50deg, $grey-dark 10%, #285381 90%);
-$background-container-login: linear-gradient(160deg, $grey-dark 50%, #285381 100%);
-$background-button: linear-gradient(180deg, $grey-light 38%, $blue 100%);
+$background-container: linear-gradient(140deg, $blue-white 30%, #285381 90%);
