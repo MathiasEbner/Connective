@@ -1,0 +1,39 @@
+@import "@/styles/_mixins.scss";
+@import "@/styles/_variables.scss";
+
+.container {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    box-shadow: $container-shadow;
+    background-color: $white;
+}
+
+.modal {
+    .logoContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+
+        p {
+            margin: 0.7rem;
+        }
+
+        .logoWrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+
+            h1 {
+                text-transform: uppercase;
+            }
+        }
+    }
+}

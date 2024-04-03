@@ -1,14 +1,18 @@
+import React from 'react';
 import styles from "@/styles/app.module.scss";
 import { parse } from 'csv-parse';
 import fs from 'fs'; // Importing file system module
 import { parseCsv } from '@/app/utils/ParseCsv';
 import { Key } from "react";
+
 import SharePopulationChart from "@/components/SharePopulationChart/SharePopulationChart";
 import BubbleChart from "@/components/BubbleChart/BubbleChart";
 import InternetTimeline from "@/components/InternetTimeline/InternetTimeline";
 import TypeUsage from "@/components/TypeUsage/TypeUsage";
+import Sidebar from '@/components/Sidebar/Sidebar';
 
 export default function Home() {
+
 
   // Read the CSV file
   const csvData1 = fs.readFileSync('app/data/ShareOfThePopulationUsingTheInternet.csv', 'utf8');
@@ -30,11 +34,16 @@ export default function Home() {
   //Get all the necessary data from files
 
   return (
-    <main className={styles.main}>
-      <SharePopulationChart data={parsedData1} />
-      <BubbleChart data={parsedData2} />
-      <InternetTimeline data={parsedData3} />
-      <TypeUsage data={parsedData4} />
-    </main>
+    <div className={styles.container}>
+      <header className={styles.sideContainer}>
+        <Sidebar />
+      </header>
+      <main className={styles.mainContainer}>
+        <SharePopulationChart data={parsedData1} />
+        <BubbleChart data={parsedData2} />
+        <InternetTimeline data={parsedData3} />
+        <TypeUsage data={parsedData4} />
+      </main>
+    </div>
   );
 }

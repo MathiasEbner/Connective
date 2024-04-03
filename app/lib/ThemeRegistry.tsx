@@ -26,7 +26,7 @@ const themeOptions: ThemeOptions = {
         //     main: "#1976d2",
         // },
         // text: {
-        //     primary: "#EDEDED",
+        //     primary: "#F8F8F8",
         //     secondary: "#161616",
 
         // },

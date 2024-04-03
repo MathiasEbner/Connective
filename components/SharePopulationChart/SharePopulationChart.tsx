@@ -44,8 +44,8 @@ export default function SharePopulationChart({ data }: { data: any[] }) {
                     // xaxis: {
                     //     title: 'Year'
                     // },
-                    plot_bgcolor: '#EDEDED', // Set the background color of the plot
-                    paper_bgcolor: '#EDEDED', // Set the background color of the entire plot
+                    plot_bgcolor: '#F8F8F8', // Set the background color of the plot
+                    paper_bgcolor: '#F8F8F8', // Set the background color of the entire plot
                     yaxis: {
                         title: 'Individuals using the Internet (% of population)'
                     },

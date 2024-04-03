@@ -35,13 +35,12 @@ export default function TypeUsage({ data }: { data: any[] }) {
                     font: {
                         family: 'Inter, sans-serif'
                     },
-                    plot_bgcolor: '#EDEDED', // Set the background color of the plot
-                    paper_bgcolor: '#EDEDED', // Set the background color of the entire plot
+                    plot_bgcolor: '#F8F8F8', // Set the background color of the plot
+                    paper_bgcolor: '#F8F8F8', // Set the background color of the entire plot
                     showlegend: false,
                     xaxis: {
-                        title: 'Number of internet users in billions',
+                        //title: 'Number of internet users in billions',
                         ticksuffix: '%',
-
                     },
                     yaxis: {
                         autorange: 'reversed',

@@ -68,8 +68,8 @@ export default function BubbleChart({ data }: { data: any[] }) {
                         family: 'Inter, sans-serif'
                     },
                     //title: 'Share of the Population Using the Internet',
-                    plot_bgcolor: '#EDEDED', // Set the background color of the plot
-                    paper_bgcolor: '#EDEDED', // Set the background color of the entire plot
+                    plot_bgcolor: '#F8F8F8', // Set the background color of the plot
+                    paper_bgcolor: '#F8F8F8', // Set the background color of the entire plot
                     xaxis: {
                         title: 'GDP per captita (US$)'
                     },

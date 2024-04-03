@@ -1,7 +1,16 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 
-.main {
+
+.container {
+    display: grid;
+    grid-template-columns: minmax(60px, 100px) 1fr;
+    height: 100%;
+}
+
+.sideContainer {}
+
+.mainContainer {
     height: 100%;
     width: 100%;
 
@@ -14,6 +23,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    padding: 1.3rem;
 
     @include mobile {
         grid-template-columns: 1fr;
