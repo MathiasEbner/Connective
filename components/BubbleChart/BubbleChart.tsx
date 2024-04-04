@@ -5,8 +5,10 @@ import React from 'react';
 import dynamic from "next/dynamic";
 const Plot = dynamic(() => import("react-plotly.js"), { ssr: false, })
 import { Data } from 'plotly.js';
+import CardHeaderOptions from "@/components/CardHeaderOptions/CardHeaderOptions"; import CircularProgress from '@mui/material/CircularProgress'
 
-export default function BubbleChart({ data }: { data: any[] }) {
+
+export default function BubbleChart({ data, isLoading }: { data: any[], isLoading: boolean }) {
     // Group data by 'Name'
     const groupedData: { [key: string]: any[] } = data.reduce((groups, item) => {
         const groupName = item['country'];
@@ -27,12 +29,12 @@ export default function BubbleChart({ data }: { data: any[] }) {
     function getContinentColor(continent: string): string {
         // Return color based on continent
         const continentColors: { [key: string]: string } = {
-            Europe: 'blue',
-            Asia: 'red',
-            Africa: 'green',
-            'North America': 'black',
-            'South America': 'orange',
-            Oceania: 'purple',
+            Europe: '#c23728',
+            Asia: '#63bff0',
+            Africa: '#0057B2',
+            'North America': '#5e569b',
+            'South America': '#e1a692',
+            Oceania: '#c23728',
         };
         return continentColors[continent];
     }
@@ -58,33 +60,54 @@ export default function BubbleChart({ data }: { data: any[] }) {
 
     return (
         <section className={styles.container}>
-            <Plot
-                useResizeHandler
-                style={{ width: "100%", height: "100%" }}
-                data={plotData}
-                layout={{
-                    autosize: true,
-                    font: {
-                        family: 'Inter, sans-serif'
-                    },
-                    //title: 'Share of the Population Using the Internet',
-                    plot_bgcolor: '#F8F8F8', // Set the background color of the plot
-                    paper_bgcolor: '#F8F8F8', // Set the background color of the entire plot
-                    xaxis: {
-                        title: 'GDP per captita (US$)'
-                    },
-                    yaxis: {
-                        title: 'Individuals using the Internet (% of population)'
-                    },
-                    legend: { x: 1, y: 0 },
-                    margin: {
-                        l: 60, // Left margin
-                        r: 60, // Right margin
-                        b: 60, // Bottom margin
-                        t: 0, // Top margin
-                    }
-                }}
-            />
+            <CardHeaderOptions title="Internet Usage Across Nations: A Comparative Analysis 2022" paragraphText="Observing the plot, several trends become evident. Firstly, there is a general positive correlation between GDP and internet usage percentage, indicating that wealthier countries tend to have higher rates of internet adoption. This suggests that economic development plays a significant role in facilitating access to and utilization of internet services.
+
+Additionally, the bubble sizes reflect the population distribution across countries, with larger bubbles representing countries with larger populations. Notably, some countries with relatively lower GDPs exhibit high internet usage percentages, suggesting that factors beyond wealth, such as infrastructure development and government policies, also influence internet accessibility and adoption.
+
+Furthermore, there are regional clusters apparent in the plot. For instance, European countries tend to have higher GDPs and internet usage percentages compared to countries in Africa and South America. However, outliers exist within each region, emphasizing the diverse economic and social landscapes influencing internet usage globally." link="https://www.gapminder.org/data/" sourceText="www.gapminder.org/data/" />
+            {
+                isLoading ? <div className="spinner">
+                    <CircularProgress size={75} />
+                </div> : <Plot
+                    useResizeHandler
+                    style={{ width: "100%", height: "100%", minHeight: "200px" }}
+                    data={plotData}
+                    layout={{
+                        autosize: true,
+                        font: {
+                            family: 'Inter, sans-serif'
+                        },
+                        //title: 'Share of the Population Using the Internet',
+                        plot_bgcolor: '#F8F8F8', // Set the background color of the plot
+                        paper_bgcolor: '#F8F8F8', // Set the background color of the entire plot
+                        xaxis: {
+                            title: 'GDP per captita (US$)', titlefont: {
+                                size: 13,
+                            }
+                        },
+                        yaxis: {
+                            title: 'Individuals using the Internet (% of population)',
+                            titlefont: {
+                                size: 13,
+                            }
+                        },
+                        legend: {
+                            x: 1,
+                            y: 0,
+                            font: {
+                                size: 9.5
+                            }
+                        },
+                        margin: {
+                            l: 60, // Left margin
+                            r: 60, // Right margin
+                            b: 60, // Bottom margin
+                            t: 0, // Top margin
+                        }
+                    }}
+                />
+            }
+
         </section>
     );
 }

@@ -10,6 +10,13 @@
     height: 100%;
     box-shadow: $container-shadow;
     background-color: $white;
+    position: fixed;
+
+    @include mobile {
+        flex-direction: row;
+        padding: 1rem;
+        position: unset;
+    }
 }
 
 .modal {

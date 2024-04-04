@@ -6,7 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
-import LogoImage from '@/images/logo.svg'
+import LogoImage from '@/images/logo2.svg'
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import CloseIcon from '@mui/icons-material/Close';
@@ -40,7 +40,7 @@ export default function Sidebar() {
                     width={55}
                 />
             </a>
-            <IconButton aria-label="infoModal" onClick={handleDialogOpen} sx={{ color: '#1C1C1C' }}>
+            <IconButton aria-label="infoModal" onClick={handleDialogOpen} sx={{ color: '#0057B2' }}>
                 <InfoIcon fontSize="medium" />
             </IconButton>
 
@@ -66,7 +66,7 @@ export default function Sidebar() {
                             Welcome to Connective, a web dashboard where we visualize and showcase the rise of positive global connections. Dive into dynamic charts illustrating the surge in internet usage, mobile networks, and the transformative impact of communication technologies.
                         </p>
                         <p>
-                            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+                            Explore our interactive charts to gain insights into the evolving digital landscape. Delve into comprehensive data representations highlighting trends in internet usage. Uncover the stories behind the numbers and chart a course towards a more connected future.
                         </p>
                     </DialogContentText>
                     <DialogActions>

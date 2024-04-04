@@ -1,0 +1,62 @@
+country,gdp,population,internet,continent
+Albania,15500,2840000,82.6,Europe
+Algeria,11200,44900000,71,Africa
+Argentina,22400,45500000,88.4,South America
+Australia,51300,26200000,96.2,Oceania 
+Austria,56300,8940000,93.6,Europe
+Belarus,19100,9530000,89.5,Europe
+Belgium,53200,11700000,94,Europe
+Brazil,15100,215000000,80.5,South America
+Bulgaria,26800,6780000,79.1,Europe
+Canada,49000,38500000,92.8,North America
+Chile,25900,19600000,75.6,South America
+China,18200,1430000000,75.6,Asia
+Colombia,15700,51900000,72.8,South America
+Congo,1130,99000000,23,Africa
+Costa Rica,22000,5180000,82.6,North America
+Cote d'Ivoire,5540,28200000,35.5,Africa
+Czech Rep.,41700,10500000,84.5,Europe
+Denmark,59700,5880000,97.9,Europe
+Ecuador,10900,18000000,69.7,South America
+Egypt,12800,111000000,72.2,Africa
+Estonia,37800,1330000,91,Europe
+Ethiopia,2380,123000000,17,Africa
+Finland,49600,5540000,93,Europe
+France,46000,64600000,85.3,Europe
+Georgia,17000,3740000,78.7,Europe
+Germany,53600,83400000,91.6,Europe
+Greece,31500,10400000,83.2,Europe
+Hong Kong,58500,7490000,95.6,Asia
+Hungary,35300,9970000,90.5,Europe
+India,7100,1420000000,47,Asia
+Indonesia,12400,276000000,66.5,Asia
+Iraq,9200,44500000,78.7,Asia
+Italy,43800,59000000,85.1,Europe
+Japan,41600,124000000,82.9,Asia
+Kazakhstan,26100,19400000,92.3,Asia
+Latvia,32700,1850000,91,Europe
+Lithuania,39600,2750000,87.7,Europe
+Malaysia,28300,33900000,97.4,Asia
+Malta,48200,533000,91.5,Europe
+Montenegro,22100,627000,88.2,Europe
+Netherlands,58600,17600000,92.5,Europe
+Nigeria,4960,219000000,55.4,Africa
+Norway,67500,5430000,99,Europe
+Palestine,57200,5250000,88.6,Asia
+Paraguay,13500,6780000,76.3,South America
+Peru,12700,34000000,74.7,South America
+Poland,36800,39900000,86.9,Europe
+Portugal,35700,10300000,84.5,Europe
+Russia,27600,145000000,90.4,Europe
+Saudi Arabia,50000,36400000,100,Asia
+Serbia,20500,7220000,83.5,Europe
+South Korea,45500,51800000,97.2,Asia
+Spain,39800,47600000,94.5,Europe
+Sweden,54800,10500000,95,Europe
+Thailand,17500,71700000,88,Asia
+Turkey,33000,85300000,83.4,Asia
+UAE,74300,9440000,100,Asia
+UK,46800,67500000,96.7,Europe
+Uruguay,24400,3420000,89.9,South America
+USA,64700,338000000,91.8,North America
+Vietnam,11400,98200000,78.6,Asia
