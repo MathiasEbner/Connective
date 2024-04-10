@@ -1,27 +1,20 @@
 "use client"
 
 import styles from "./Sidebar.module.scss";
-import React, { useState, useEffect } from 'react';
-import Link from "next/link";
+import React, { useState } from 'react';
 import Image from "next/image";
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
-import LogoImage from '@/images/logo2.svg'
+import LogoImage from '@/images/logo.svg'
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
-import CloseIcon from '@mui/icons-material/Close';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import Button from '@mui/material/Button';
 
 export default function Sidebar() {
 
     const [dialogOpen, setDialogOpen] = useState(false);
-
-    // useEffect(() => {
-    //     handleDialogOpen()
-    // }, [])
 
     const handleDialogOpen = () => {
         setDialogOpen(true);
@@ -40,13 +33,13 @@ export default function Sidebar() {
                     width={55}
                 />
             </a>
-            <IconButton aria-label="infoModal" onClick={handleDialogOpen} sx={{ color: '#0057B2' }}>
+            <IconButton aria-label="infoModal" onClick={handleDialogOpen} sx={{ color: '#27374D' }}>
                 <InfoIcon fontSize="medium" />
             </IconButton>
 
             <Dialog open={dialogOpen} onClose={handleDialogClose} fullWidth maxWidth="md" className={styles.modal} PaperProps={{
                 sx: {
-                    padding: '24px' // Set the padding for the Paper component
+                    padding: '24px'
                 }
             }}>
                 <DialogContent>

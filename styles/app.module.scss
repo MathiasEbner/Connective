@@ -11,10 +11,6 @@
     }
 }
 
-.sideContainer {
-    //position: fixed;
-}
-
 .mainContainer {
     height: 100%;
     width: 100%;
@@ -65,11 +61,9 @@
 }
 
 .statisticsContainer {
-    //@include card;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
-    //max-height: 100px;
 
     @include tablet {
         grid-template-columns: 1fr;

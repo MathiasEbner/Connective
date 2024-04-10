@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from 'react';
 import styles from "@/styles/app.module.scss";
-import { readFile } from 'fs/promises';
 import { parseCsv } from '@/app/utils/ParseCsv';
 import LineChart from "@/components/LineChart/LineChart";
 import BubbleChart from "@/components/BubbleChart/BubbleChart";
@@ -20,6 +19,7 @@ import NaturePeopleIcon from '@mui/icons-material/NaturePeople';
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 
 export default function Home() {
+  // State variables for chart data and loading states
   const [lineChartData, setLineChartData] = useState([]);
   const [bubbleChartData, setBubbleChartData] = useState([]);
   const [histogramChartData, setHistogramChartData] = useState([]);
@@ -29,24 +29,34 @@ export default function Home() {
   const [isLoadingHistogramChart, setIsLoadingHistogramChart] = useState(true);
   const [isLoadingBarChart, setIsLoadingBarChart] = useState(true);
 
+  // Icon properties
+  const iconColor = '#007DFF';
+  const iconSizeLarge = 44;
+  const iconSizeSmall = 40;
+
+  // useEffect hook to load data on component mount
   useEffect(() => {
     async function loadData() {
       try {
+        // Fetching and setting line chart data
         const lineChartDataResponse = await fetch('lineChartData.csv');
         const lineChartDataText = await lineChartDataResponse.text();
         setLineChartData(parseCsv(lineChartDataText));
         setIsLoadingLineChart(false);
 
+        // Fetching and setting histogram chart data
         const histogramChartDataResponse = await fetch('histogramChartData.csv');
         const histogramChartDataText = await histogramChartDataResponse.text();
         setHistogramChartData(parseCsv(histogramChartDataText));
         setIsLoadingHistogramChart(false);
 
+        // Fetching and setting bubble chart data
         const bubbleChartDataResponse = await fetch('bubbleChartData.csv');
         const bubbleChartDataText = await bubbleChartDataResponse.text();
         setBubbleChartData(parseCsv(bubbleChartDataText));
         setIsLoadingBubbleChart(false);
 
+        // Fetching and setting bar chart data
         const barChartDataResponse = await fetch('barChartData.csv');
         const barChartDataText = await barChartDataResponse.text();
         setBarChartData(parseCsv(barChartDataText));
@@ -59,10 +69,6 @@ export default function Home() {
 
     loadData();
   }, []);
-
-  const iconColor = '#0057B2';
-  const iconSizeLarge = 44;
-  const iconSizeSmall = 40;
 
 
   return (

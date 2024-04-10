@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.className}>
-      <body className="bg-background text-foreground" >
+      <body >
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ThemeRegistry>
             {children}

@@ -1,8 +1,3 @@
-// BREAKPOINTS
-$mobile: 600;
-$tablet: 960;
-$desktop: $tablet + 1;
-
 // COLORS
 $white: #f8f8f8;
 $black: #161616;
@@ -10,13 +5,10 @@ $blue: #007DFF;
 $blue-dark: #0057B2;
 $blue-light: #526D82;
 $blue-grey: #27374D;
-$blue-white: #dde6ed43;
-
 
 // SHADOWS
 $container-shadow: 0px 0px 11px rgba(0, 0, 0, 0.25);
 $inner-shadow: inset 1px 1px 15px rgba(0, 0, 0, 0.25);
 
 // BACKGROUNDS
-$background-container: linear-gradient(140deg, $blue-white 30%, $blue-dark 90%);
-//$background-button: linear-gradient(120deg, $white 38%, $blue 100%);
+$background-container: linear-gradient(140deg, #dde6ed43 30%, $blue-dark 90%);
