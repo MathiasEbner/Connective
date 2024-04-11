@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Image from "next/image";
 import IconButton from '@mui/material/IconButton';
 import InfoIcon from '@mui/icons-material/Info';
+import LogoFullImage from '@/images/logoFull.svg'
 import LogoImage from '@/images/logo.svg'
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
@@ -47,11 +48,11 @@ export default function Sidebar() {
                         <div className={styles.logoContainer}>
                             <div className={styles.logoWrapper}>
                                 <Image
-                                    src={LogoImage}
+                                    src={LogoFullImage}
                                     alt="Connective Logo"
-                                    width={65}
+                                    width={300}
                                 />
-                                <h1>Connective</h1>
+                                {/* <h1>Connective</h1> */}
                             </div>
                             <p>visualising the rise of global connections</p>
                         </div>

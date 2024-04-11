@@ -25,4 +25,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Installed Packes
 
-plotly.js, react-countup, csv-parse, mui, ..
+plotly.js, csv-parse, materialUI + icons

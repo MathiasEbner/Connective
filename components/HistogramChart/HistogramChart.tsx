@@ -66,7 +66,7 @@ export default function HistogramChart({ data, isLoading }: { data: any[], isLoa
                     </div> :
                     <Plot
                         useResizeHandler
-                        style={{ width: "100%", height: "100%", minHeight: "200px" }}
+                        style={{ width: "100%", height: "100%", minHeight: "250px" }}
                         data={plotData}
                         layout={{
                             autosize: true,
