@@ -62,7 +62,7 @@ export default function Sidebar() {
                         <p>
                             Explore our interactive charts to gain insights into the evolving digital landscape. Delve into comprehensive data representations highlighting trends in internet usage. Uncover the stories behind the numbers and chart a course towards a more connected future.
                         </p>
-                        <p>Images form freepik.com</p>
+                        <p>Images from freepik.com</p>
                     </DialogContentText>
                     <DialogActions>
                         <Button variant="contained" onClick={handleDialogClose}>
