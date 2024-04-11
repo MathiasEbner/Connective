@@ -10,7 +10,7 @@ import CircularProgress from '@mui/material/CircularProgress'
 
 export default function LineChart({ data, isLoading }: { data: any[], isLoading: boolean }) {
 
-    const paragraphText = `The provided data tracks internet usage as a percentage of the population across various regions from 1990 to 2020. It reveals a global trend of increasing internet adoption, with North America and Europe leading in usage percentages exceeding 90%. However, Sub-Saharan Africa and South Asia still have significantly lower rates, indicating persistent digital disparities. Overall, the data underscores the transformative role of the internet while highlighting ongoing challenges in achieving universal access worldwide.`
+    const paragraphText = `The provided data tracks internet usage as a percentage of the population across various regions from 1990 to 2020. It reveals a global trend of increasing internet adoption, with North America and Europe leading in usage percentages around 90%. However, Sub-Saharan Africa and South Asia still have significantly lower rates, indicating persistent digital disparities. Overall, the data underscores the transformative role of the internet while highlighting ongoing challenges in achieving universal access worldwide.`
 
     // Group data by 'Name'
     const groupedData: { [key: string]: any[] } = data.reduce((groups, item) => {
