@@ -57,7 +57,7 @@ export default function Sidebar() {
                             <p>visualising the rise of global connections</p>
                         </div>
                         <p>
-                            Welcome to Connective, a web dashboard where we visualize and showcase the rise of positive global connections. Dive into dynamic charts illustrating the surge in internet usage, mobile networks, and the transformative impact of communication technologies.
+                            Welcome to Connective, a web dashboard where we visualize and showcase the rise of positive global connections. Dive into dynamic charts illustrating the surge in internet usage worldwide.
                         </p>
                         <p>
                             Explore our interactive charts to gain insights into the evolving digital landscape. Delve into comprehensive data representations highlighting trends in internet usage. Uncover the stories behind the numbers and chart a course towards a more connected future.
