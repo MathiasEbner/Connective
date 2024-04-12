@@ -74,7 +74,7 @@ export default function BubbleChart({ data, isLoading }: { data: any[], isLoadin
                     </div> :
                     <Plot
                         useResizeHandler
-                        style={{ width: "100%", height: "100%", minHeight: "200px" }}
+                        style={{ width: "100%", height: "100%", minHeight: "300px" }}
                         data={plotData}
                         layout={{
                             autosize: true,
